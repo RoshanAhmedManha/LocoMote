@@ -1,0 +1,576 @@
+/* =======================================Import google fonts======================================== */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Signika:wght@300..700&display=swap");
+
+/* ==================Universal selectors, variables defined and by Custom styles================== */
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:active,
+:hover,
+:focus {
+  outline: 0 !important;
+  outline-offset: 0;
+}
+
+/* ================variable defined============== */
+:root {
+  --primary-color: #cf382c;
+  --secondary-color: #244c7c;
+  --third-color: #dd4d34;
+  --forth-color: #3464a1;
+  --white-color: #fff;
+  --text-color: #555;
+  --text-gray: #999;
+  --black-color: #000;
+  --primary-font: "Oswald", sans-serif;
+  --secondary-font: "Signika", sans-serif;
+}
+
+/* ===================Custom Css design============== */
+a,
+a:hover {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color) !important;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--secondary-font);
+  font-size: 100%;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+  text-transform: capitalize;
+  color: var(--black-color);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2.25rem;
+  text-transform: capitalize;
+  color: var(--secondary-color);
+  line-height: 3rem;
+}
+
+h4 {
+  color: var(--black-color);
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+h5 {
+  color: var(--black-color);
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--text-color);
+  font-weight: 400;
+  line-height: 1.75rem;
+  letter-spacing: 1px;
+}
+
+/* ============Custom scroll style=============== */
+
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--white-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+
+/* ============Button style====================== */
+
+.main-btn {
+  display: inline-block;
+  padding: 0.625rem 1.875rem;
+  line-height: 1.5625rem;
+  background-color: var(--primary-color);
+  border: 0.1875rem solid var(--primary-color);
+  color: var(--white-color);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  box-shadow: 0px 2px 10px -1px rgba(0 0 0 / 19%);
+  -webkit-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  -moz-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+}
+
+.white-btn {
+  display: inline-block;
+  padding: 0.625rem 1.875rem;
+  line-height: 1.5625rem;
+  background-color: var(--white-color);
+  border: 0.1875rem solid var(--white-color);
+  color: var(--black-color);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  box-shadow: 0px 2px 10px -1px rgba(0 0 0 / 19%);
+  -webkit-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  -moz-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+}
+.form-btn {
+  display: inline-block;
+  padding: 0.625rem 1.875rem;
+  line-height: 1.5625rem;
+  background-color: var(--white-color);
+  border: 0.1875rem solid var(--white-color);
+  color: var(--primary-color);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  box-shadow: 0px 2px 10px -1px rgba(0 0 0 / 19%);
+  -webkit-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  -moz-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+}
+
+.main-btn:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.white-btn:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.form-btn:hover {
+  background-color: transparent;
+  border: 0.1875rem solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.wrapper {
+  padding-top: 8.25rem;
+  padding-bottom: 8.25rem;
+}
+
+.text-content {
+  width: 70%;
+  margin: auto;
+}
+
+.counter-section h2,
+.testimonial-section h2,
+.book-item-text h2 {
+  color: var(--white-color);
+}
+
+/* ================================Style for Header======================================== */
+
+.navigation-wrap {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 1000;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.navigation-wrap .nav-item {
+  padding: 0 0.625rem;
+  transition: all 200ms linear;
+}
+
+.navbar-toggler:focus {
+  outline: unset;
+  border: unset;
+  box-shadow: none;
+}
+
+.navbar-toggler {
+  padding: unset;
+  font-size: unset;
+  line-height: unset;
+  color: var(--primary-color);
+  background-color: unset;
+  border: unset;
+  border-radius: unset;
+  transition: unset;
+}
+
+.navbar-toggler-icon {
+  display: unset;
+  width:unset;
+  height: unset;
+  vertical-align: unset;
+  background-image: unset;
+  background-repeat: unset;
+  background-position: unset;
+  background-size: unset;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--secondary-color);
+  letter-spacing: 1px;
+}
+
+.navigation-wrap.scroll-on {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--white-color);
+  box-shadow: 0 0.125rem 1.75rem 0 rgba(0, 0, 0, 0.09);
+  transition: all 0.15s ease-out 0s; 
+}
+
+/* ===============================Style for Home sections================================ */
+
+.top-banner {
+  width: 100%;
+  background: url(../public/background/background3.png) no-repeat center;
+  background-size: cover;
+  padding: 16.875rem 0 9.375rem;
+}
+
+/* ===============================Style for about sections=============================== */
+
+.about-section {
+  background: var(--white-color);
+}
+
+.about-section .card,
+.about-section img {
+  border-radius: 0.625rem;
+}
+
+.about-section .text-sec {
+  padding-left: 2rem;
+  padding-top: 2.8rem; 
+}
+.about-section h1 {
+  color: var(--secondary-color);
+}
+
+/* product-type */
+
+.product-type {
+  padding-top: 3.25rem;
+}
+.product-type ul li {
+  font-size: 1rem;
+  color: var(--third-color);
+  line-height: 32px;
+  position: relative;
+  margin-left: 40px;
+}
+
+.product-type ul li::before {
+  position: absolute;
+  left: -2.1875rem;
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  font-family: "Font Awesome 5 Free";
+  content: '\f00c';
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+}
+
+.product-type .card {
+  padding-top: 3.25rem;
+}
+.product-type h2 {
+  padding-top: 2rem;
+}
+
+/* Aboutban-Sections */
+
+.aboutban-section {
+  width: 100%;
+  height: 25.125rem;
+  background: url(../public/background/background1.jpg) no-repeat center;
+  background-size: cover;
+  padding-top: 100px;
+  text-align: center;
+}
+.aboutban-section h2 {
+  color: var(--primary-color);
+}
+
+/* ================================Style for services section============================== */
+.service-section ul li {
+  font-size: 1rem;
+  color: var(--third-color);
+  line-height: 32px;
+  position: relative;
+  margin-left: 80px;
+}
+.service-section ul li::before{
+  position: absolute;
+  left: -2.1875rem;
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  font-family: "Font Awesome 5 Free";
+  content: '\f00c';
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+}
+.service-section .card,
+.service-section img {
+  border-radius: 0.625rem;
+}
+.service-section .service-text {
+  padding-left: 2rem;
+  padding-top: 1.35rem;
+}
+.service-icon .card {
+  padding-top: 3.25rem;
+}
+.service-section .service-icon {
+  padding-top: 3.25rem;
+}
+
+/* ================================Style for Counter section=============================== */
+
+.counter-section {
+  background-color: var(--primary-color);
+  padding: 2.5rem 0;
+}
+.counter-section p {
+  color: var(--white-color);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+/* ================================Style for Products section============================== */
+
+.product-section p {
+  padding-top: 0.625rem;
+}
+.product-section .card {
+  padding: 20px 30px;
+  flex: 1 1 21rem;
+  align-items: center;
+  border: none;
+  background-color: var(--white-color);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  border-radius: 0.9375rem;
+  display: flex;
+}
+.product-section .card img {
+  width: 300px;
+  height: 300px;
+  border-radius: 0.9375rem;
+  object-fit: cover;
+}
+.product-section .card span {
+  display: block;
+  font-family: var(--secondary-font);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  padding-bottom: 3px;
+}
+.product-section .card span del {
+  color: var(--text-gray);
+  margin-left: 0.5rem;
+}
+.product-section .card h4 {
+  color: var(--secondary-color);
+}
+.product-section .card button {
+  margin-top: auto;
+}
+
+/* ================================Style for review section=============================== */
+
+.review-section {
+  background-color: var(--secondary-color);
+}
+.review-section .carousel-item {
+  margin-top: 3rem;
+  padding: 10rem 3.125rem;
+  background-color: var(--white-color);
+  border-radius: 0.9375rem;
+  text-align: center;
+}
+.review-section .carousel-caption img {
+  max-width: 5rem;
+  border-radius: 50%;
+  padding: 0.3125rem;
+}
+.review-section .carousel-item .carousel-caption p {
+  font-size: 1.3125rem;
+  line-height: 2.0625rem;
+  padding: 0 11% 0.625rem; 
+}
+.review-section .carousel-item h5 {
+  color: var(--primary-color);
+}
+.review-section .carousel-indicators {
+  bottom: -2.8125rem;
+}
+.carousel-indicators [data-bs-target] {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  background-clip: padding-box;
+  border: none;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+.carousel-indicators .active {
+  opacity: 1;
+}
+
+/* ================================Style for FAQ Section=================================== */
+
+.faq-section h4 span {
+  color: var(--primary-color);
+  font-size: 1.875rem;
+  margin-right: 0.3125rem;
+}
+.faq-section h4 {
+  color: var(--secondary-color);
+}
+
+/* ================================Style for parallex banner section======================= */
+
+.paral-section {
+  width: 100%;
+  background: url(../public/background/background4.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 0 71.9125px;
+  padding: 4.375rem 0;
+}
+
+/* =================================Style for Contact Us Section============================*/
+
+
+.form-card-in {
+  justify-content: end;
+}
+.form-card {
+  width: 80%;
+  padding: 0.625rem 0.625rem;
+  background-color: var(--primary-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.form-label {
+  color: var(--white-color);
+  font-weight: 600;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #cf382c;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: .375rem;
+  box-shadow: none !important;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.form-control:focus {
+  border: 1px solid #244c7c;
+}
+
+.contact-details {
+  justify-content: center;
+}
+.icon-card {
+  width: 40%;
+  height: 100%;
+  padding: 0.625rem 0.625rem;
+  text-align: center;
+  background-color: #cf382c;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.icon-card h5 {
+  color: white;
+  margin-top: 0.625rem;
+  margin-bottom: 0.225rem;
+}
+
+/* ================================Style for footer section=============================== */
+
+.footer-section {
+  background: var(--secondary-color);
+}
+.footer-section .footer-link {
+  font-size: 1rem;
+  color: var(--white-color);
+  padding: 0 1.875rem;
+}
+.footer-section a,i {
+  font-size: 1.5rem;
+  color: var(--white-color);
+  padding: 0 1rem;
+}
+
+
+
+
+
+
+
+/* ================================Style for navbar logo=================================== */
+
+.navbar-brand img {
+  width: 80px;
+  margin-right: 10px;
+}
